@@ -1,0 +1,110 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f5ff;
+  }
+  
+  .profile-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    width: 320px;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #7C3AED;
+  }
+  
+  .profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .profile-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .profile-card button {
+    background: #7C3AED;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .profile-card button:hover {
+    background: #652cc1;
+  }
+  .initials-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7c3aed;
+    font-weight: bold;
+    font-size: 32px;
+    background-color: #f0e8ff;
+    border-radius: 50%;
+  }
+  
+  .profile-pic {
+    position: relative;
+  }
+  
+  .edit-btn {
+    background: transparent;
+    border: 2px solid #7c3aed;
+    color: #7c3aed;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .edit-btn:hover {
+    background-color: #7c3aed;
+    color: white;
+  }
+  
+  .signout-btn {
+    background: #7c3aed;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .signout-btn:hover {
+    background: #652cc1;
+  }
+  

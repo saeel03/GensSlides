@@ -1,0 +1,207 @@
+/* Layout */
+.signin-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+
+/* Left Side */
+.signin-left {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: slideInLeft 0.8s ease-in-out forwards;
+  background-color: #fff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Gradient Title */
+.signin-title {
+  font-size: 36px;
+  background: linear-gradient(90deg, #4C17EC, #C546AB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Form */
+.signin-form {
+  max-width: 350px;
+  width: 100%;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.signin-form label {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #6b6b6b;
+  display: block;
+}
+
+.signin-form input {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-top: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.3s border-color ease;
+}
+
+.signin-form input:focus {
+  border-color: #6C4CE9;
+  outline: none;
+}
+
+/* Button */
+.signin-btn {
+  margin-top: 30px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #6C4CE9, #A04CE9);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.signin-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(108, 76, 233, 0.3);
+}
+
+/* Footer Text */
+.signin-footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.signin-register {
+  color: #6C4CE9;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.signin-register:hover {
+  color: #4C17EC;
+}
+
+/* Or divider */
+.signin-or {
+  margin: 20px 0;
+  text-align: center;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* Social Icons */
+.signin-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.signin-icons img {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.signin-icons img:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+/* Right Side */
+.signin-right {
+  flex: 1;
+  background: url('../assets/bg1.png') no-repeat center center/cover;
+  position: relative;
+  animation: slideInRight 1s ease-in-out forwards;
+}
+
+.signin-overlay {
+  background: rgba(76, 17, 236, 0.45);
+  color: white;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.signin-overlay h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: fadeInUp 1.3s ease-in-out;
+}
+
+.signin-overlay p {
+  font-size: 14px;
+  max-width: 350px;
+  line-height: 1.6;
+  color: #eee;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

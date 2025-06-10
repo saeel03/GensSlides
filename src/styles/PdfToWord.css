@@ -1,0 +1,102 @@
+.pdf-to-word-container {
+  max-width: 500px;
+  margin: 4rem auto;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(to bottom right, #ffffff, #f9f9f9);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.7s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pdf-to-word-container h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 2rem;
+  animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.file-input {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  border: 2px dashed #bbb;
+  border-radius: 12px;
+  background-color: #fafafa;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.file-input:hover {
+  border-color: #007bff;
+  background-color: #f0f8ff;
+}
+
+.convert-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.convert-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.convert-button:disabled {
+  background-color: #9fc6ee;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.download-section {
+  margin-top: 2rem;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.download-section a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #007bff;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.download-section a:hover {
+  color: #0056b3;
+  transform: scale(1.05);
+}

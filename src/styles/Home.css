@@ -1,0 +1,198 @@
+/* Home.css */
+.home-container {
+  background-image: url('../assets/bghome.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 120px;
+  padding: 120px 1rem 2rem;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.home-inner {
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+  backdrop-filter: blur(0); /* optional for glassmorphism look */
+  box-shadow: none;
+}
+
+.gradient-heading {
+  font-family: 'Quattrocento', serif;
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #8A2BE2, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.2rem;
+}
+
+.sub-text {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.input-wrapper {
+  display: flex;
+  background: white;
+  border: 2px solid #8A2BE2;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.input-wrapper input {
+  flex: 1;
+  padding: 0.9rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background: transparent;
+  color: #333;
+}
+
+.home-inner button {
+  background: linear-gradient(to right, #8A2BE2, #FFA500);
+  color: white;
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-inner button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(138, 43, 226, 0.3);
+}
+
+.home-inner a {
+  color: #8A2BE2;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+.home-inner a:hover {
+  color: #FFA500;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #8A2BE2, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Services section */
+.services-section {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  scroll-snap-align: start;
+}
+
+.services-title {
+  font-size: 2.7rem;
+  color: #5f2eea;
+  margin-bottom: 40px;
+  font-weight: 800;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.service-card {
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.service-card button {
+  background-color: #7f56d9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.001s;
+}
+
+.service-card button:hover {
+  background-color: #6931c4;
+}
+
+.pink {
+  color: #ec4899;
+}
+
+.blue {
+  color: #6366f1;
+}
+
+/* Smooth scroll snap between sections */
+html, body {
+  scroll-behavior: smooth;
+}
+
+section, .home-container {
+  scroll-snap-align: start;
+}
+
+.glow-button {
+  animation: glowPulse 2.5s infinite;
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 0px rgba(255, 165, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(255, 165, 0, 0.4);
+  }
+}

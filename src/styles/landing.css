@@ -1,0 +1,237 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Layout */
+  .landing-page {
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    z-index: 999;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .left .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b135cc;
+  }
+  
+  .right {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .contact-button,
+  .login-button,
+  .signup-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #9e47f5, #6418c3);
+    color: white;
+    box-shadow: 0 4px 14px rgba(100, 24, 195, 0.4);
+  }
+  
+  .contact-button:hover,
+  .login-button:hover,
+  .signup-button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(100, 24, 195, 0.6);
+    background: linear-gradient(135deg, #b56cf9, #7631db);
+  }
+  
+  /* Center content */
+  .center-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 100px 60px 40px 60px;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  /* Main content (left) */
+  .main-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 90%;
+    padding: 20px 20px 20px 0px;
+    z-index: 1;
+  }
+  
+  .title-container {
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #000;
+    margin-bottom: 20px;
+    animation: typing 4s steps(40, end), blink 0.75s step-end infinite;
+  }
+  
+  .typing-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #4b28d9, #c53986, #d88c29, #9436d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+  }
+  
+  .subtitle {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    animation: fadeIn 1.5s ease-in forwards;
+    opacity: 0;
+    animation-delay: 4s;
+  }
+  
+  .signup-button {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    animation: fadeIn 1.5s ease-in forwards;
+    opacity: 0;
+    animation-delay: 5s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Carousel section (right) */
+  .carousel-section {
+    flex: 1;
+    max-width: 45%;
+    border: 3px solid #b135cc;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInCarousel 1.5s ease-in forwards;
+    animation-delay: 6s;
+  }
+  
+  @keyframes fadeInCarousel {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .carousel-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .right {
+      align-self: flex-end;
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .center-wrapper {
+      flex-direction: column;
+      align-items: center;
+      padding: 100px 20px 40px;
+    }
+  
+    .main-content,
+    .carousel-section {
+      max-width: 100%;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .subtitle {
+      font-size: 16px;
+    }
+  
+    .signup-button {
+      padding: 8px 20px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .login-button,
+    .signup-button {
+      width: 100%;
+    }
+  }
+  
+  html, body, #root {
+    background-color: white;
+  }
+  

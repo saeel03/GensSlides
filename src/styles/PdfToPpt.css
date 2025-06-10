@@ -1,0 +1,126 @@
+/* Reset and base styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f2f6ff, #e0e7ff);
+    color: #333;
+  }
+  
+  /* Container */
+  .pdf-to-ppt-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Heading */
+  .pdf-to-ppt-container h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #4f46e5;
+    animation: popUp 0.6s ease;
+  }
+  
+  /* Upload area */
+  .upload-area {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .upload-area label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .upload-area input[type="file"] {
+    padding: 10px;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    width: 100%;
+    transition: border-color 0.3s ease;
+    background-color: #f9fafb;
+  }
+  
+  .upload-area input[type="file"]:hover {
+    border-color: #4f46e5;
+  }
+  
+  /* Convert Button */
+  .convert-action button {
+    margin-top: 20px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .convert-action button:hover {
+    background-color: #4338ca;
+    transform: scale(1.05);
+  }
+  
+  .convert-action button:disabled {
+    background-color: #a5b4fc;
+    cursor: not-allowed;
+  }
+  
+  /* Download area */
+  .download-area {
+    margin-top: 30px;
+  }
+  
+  .download-area a {
+    display: inline-block;
+    background-color: #10b981;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .download-area a:hover {
+    background-color: #059669;
+    transform: translateY(-2px);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes popUp {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  html, body, #root {
+    background-color: rgb(207, 171, 252);
+  }
+  
